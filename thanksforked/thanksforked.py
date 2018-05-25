@@ -8,7 +8,7 @@ import text
 @click.command()
 @click.argument('username', type=click.STRING)
 def main(username):
-    """Console script for thanksforked."""
+    """Console script for forkedthanks."""
     print(text.newline())
     password = getpass.getpass(prompt='{}{}{}'.format(
         text.base_accent('Please enter a password for github account "'),

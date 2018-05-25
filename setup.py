@@ -11,28 +11,28 @@ requirements = [
 ]
 
 setup(
-    name='thanksforked',
+    name='forkedthanks',
     version='0.0.1',
     description="Thanks with a ⭐️ the projects you forked",
     long_description=readme,
     author="Etienne Napoleone",
     author_email='etienne_napo@hotmail.com',
     # download_url=
-    url='https://github.com/etienne-napoleone/thanksforked',
+    url='https://github.com/etienne-napoleone/forkedthanks',
     project_urls={
-        'Source': 'https://github.com/etienne-napoleone/thanksforked',
-        'Tracker': 'https://github.com/etienne-napoleone/thanksforked/issues',
+        'Source': 'https://github.com/etienne-napoleone/forkedthanks',
+        'Tracker': 'https://github.com/etienne-napoleone/forkedthanks/issues',
     },
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'thanksforked=thanksforked.thanksforked:main',
+            'forkedthanks=forkedthanks.forkedthanks:main',
         ],
     },
     python_requires='>=3.5',
     install_requires=requirements,
     license="MIT License",
-    keywords='thanksforked',
+    keywords='forkedthanks',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
