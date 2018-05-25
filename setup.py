@@ -23,13 +23,13 @@ setup(
         'Source': 'https://github.com/etienne-napoleone/thanksforked',
         'Tracker': 'https://github.com/etienne-napoleone/thanksforked/issues',
     },
-    packages=find_packages(include=['thanksforked']),
+    packages=find_packages(),
     entry_points={
         'console_scripts': [
             'thanksforked=thanksforked.thanksforked:main',
         ],
     },
-    python_requires='python>=3.5',
+    python_requires='>=3.5',
     install_requires=requirements,
     license="MIT License",
     keywords='thanksforked',
