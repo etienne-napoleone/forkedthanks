@@ -5,15 +5,9 @@ with open('README.md') as readme_file:
     readme = readme_file.read()
 
 requirements = [
-    # TODO(etienne): add requirements
-]
-
-setup_requirements = [
-    # TODO(etienne): add setup requirements
-]
-
-test_requirements = [
-    # TODO(etienne): add test requirements
+    'pygithub',
+    'click',
+    'hues'
 ]
 
 setup(
@@ -32,7 +26,7 @@ setup(
     packages=find_packages(include=['thanksforked']),
     entry_points={
         'console_scripts': [
-            'thanksforked=thanksforked.cli:main',
+            'thanksforked=thanksforked.thanksforked:main',
         ],
     },
     install_requires=requirements,
@@ -51,7 +45,4 @@ setup(
         'Topic :: Software Development :: Version Control :: Git',
         'Topic :: Utilities'
     ],
-    test_suite='tests',
-    tests_require=test_requirements,
-    setup_requires=setup_requirements,
 )

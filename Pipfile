@@ -9,7 +9,7 @@ name = "pypi"
 
 pygithub = "*"
 click = "*"
-emoji = "*"
+hues = "*"
 
 
 [dev-packages]
