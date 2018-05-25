@@ -5,9 +5,9 @@ with open('README.md') as readme_file:
     readme = readme_file.read()
 
 requirements = [
-    'pygithub',
-    'click',
-    'hues'
+    'pygithub>=1.39',
+    'click>=6.7',
+    'hues>=0.2.2'
 ]
 
 setup(
