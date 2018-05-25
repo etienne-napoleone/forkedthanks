@@ -29,6 +29,7 @@ setup(
             'thanksforked=thanksforked.thanksforked:main',
         ],
     },
+    python_requires='python>=3.5',
     install_requires=requirements,
     license="MIT License",
     keywords='thanksforked',
