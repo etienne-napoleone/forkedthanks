@@ -12,7 +12,7 @@ requirements = [
 
 setup(
     name='forkedthanks',
-    version='0.0.1',
+    version='0.1.0',
     description="Thanks with a ⭐️ the projects you forked",
     long_description=readme,
     author="Etienne Napoleone",
@@ -23,7 +23,7 @@ setup(
         'Source': 'https://github.com/etienne-napoleone/forkedthanks',
         'Tracker': 'https://github.com/etienne-napoleone/forkedthanks/issues',
     },
-    packages=find_packages(),
+    packages=['forkedthanks'],
     entry_points={
         'console_scripts': [
             'forkedthanks=forkedthanks.forkedthanks:main',
@@ -34,7 +34,7 @@ setup(
     license="MIT License",
     keywords='forkedthanks',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',

@@ -2,7 +2,7 @@ import sys
 import getpass
 import click
 import github
-import text
+import forkedthanks.text as text
 
 
 @click.command()
