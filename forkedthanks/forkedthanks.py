@@ -8,7 +8,7 @@ import forkedthanks.text as text
 @click.command()
 @click.argument('username', type=click.STRING)
 def main(username):
-    """Console script for forkedthanks."""
+    """Thanks with a star the projects you forked"""
     print(text.newline())
     password = getpass.getpass(prompt='{}{}{}'.format(
         text.base_accent('Please enter a password for github account "'),

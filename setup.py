@@ -1,5 +1,4 @@
 from setuptools import setup
-from setuptools import find_packages
 
 with open('README.md') as readme_file:
     readme = readme_file.read()
@@ -17,7 +16,6 @@ setup(
     long_description=readme,
     author="Etienne Napoleone",
     author_email='etienne_napo@hotmail.com',
-    # download_url=
     url='https://github.com/etienne-napoleone/forkedthanks',
     project_urls={
         'Source': 'https://github.com/etienne-napoleone/forkedthanks',
