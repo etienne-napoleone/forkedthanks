@@ -1,15 +1,16 @@
 language: python
+
 python:
   - 3.6
   - 3.5
 install:
 - pip install pipenv
 - pipenv sync --dev
+script: echo "running test"
 
 jobs:
   include:
-  - script: echo "Running fake test 1"
-  - script: echo "Running fake test 2"
+
   - stage: Lint
     install:
     - pip install pipenv
@@ -17,6 +18,7 @@ jobs:
     script:
     - echo "Validating linting"
     - flake8 .
+
   - stage: Github release
     script: echo "Releasing to Github"
     install: true
