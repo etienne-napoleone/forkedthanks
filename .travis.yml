@@ -4,13 +4,14 @@ python:
   - 3.4
   - 3.5
   - 3.6
-install:
-    - pip install pipenv
-    - pipenv sync --dev
-script: flake8 .
 
 jobs:
   include:
+    - stage: Lint
+      install:
+          - pip install pipenv
+          - pipenv sync --dev
+      script: flake8 .
     - stage: Github release
       python: 3.6
       install: false
