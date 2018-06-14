@@ -2,8 +2,14 @@ language: python
 python:
   - 3.6
   - 3.5
+install:
+- pip install pipenv
+- pipenv sync --dev
+
 jobs:
   include:
+  - script: echo "Running fake test 1"
+  - script: echo "Running fake test 2"
   - stage: Lint
     install:
     - pip install pipenv
