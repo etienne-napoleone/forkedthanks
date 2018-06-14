@@ -9,6 +9,7 @@ jobs:
           - pipenv sync --dev
       script: flake8 .
     - stage: Github release
+      install: false
       deploy:
         provider: releases
         api_key:
