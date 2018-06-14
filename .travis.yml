@@ -1,18 +1,16 @@
 language: python
-python:
-  - 3.4
-  - 3.5
-  - 3.6
-
-install:
-    - pip install pipenv
-    - pipenv sync --dev
-
-script:
-    - flake8 .
 
 jobs:
   include:
+    - stage: test
+      python:
+        - 3.4
+        - 3.5
+        - 3.6
+      install:
+          - pip install pipenv
+          - pipenv sync --dev
+      script: flake8 .
     - stage: release
       deploy:
         provider: releases
