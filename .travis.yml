@@ -1,19 +1,14 @@
 language: python
+python: 3.6
 
 jobs:
   include:
     - stage: Lint
-      python:
-        - 3.4
-        - 3.5
-        - 3.6
       install:
           - pip install pipenv
           - pipenv sync --dev
       script: flake8 .
     - stage: Github release
-      python: 3.6
-      install: false
       deploy:
         provider: releases
         api_key:
