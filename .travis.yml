@@ -1,22 +1,22 @@
 language: python
 python: 3.6
-
 jobs:
   include:
-    - stage: Lint
-      install:
-          - pip install pipenv
-          - pipenv sync --dev
-      script:
-        - echo "Validating linting"
-        - flake8 .
-    - stage: Github release
-      script: echo "Releasing to Github"
-      deploy:
-        provider: releases
-        api_key:
-          secure: "ZBhTXfzl9WtwTBU49GFIH48Q7Z9rp/zzeQZMD/t2+lz4TfbEgudhyq3runJ+8dxLf5TvFkmQjcvIfvSeVkkIovNb5o+f3Q8hrwSkB4s8LLURtU6GUP7gvAVzc908bE60TmDo5lLVCIRkiVDT0mb52Xrw1nlnwYhS4wjDILDZztzsJoKeFqqtWhlqkr1Bk1/Rr9iMfW49YZlDE15qsZ9sSCxXrWiJgClKmAHicfY7Gncr4KzY7j/SEzEhKg1foQaxIpXo+VasTJ+5qMk6X+ZMWpI/9GU6lt5Pn+D32ULJUNLO3De+Cxbql45JbzvKo7H77vnnHWEu5nQTv6udDOhrUy29fYadcNjLfnty/Zd7qUXf5spLSuK4rlRc04PFtIIAy8+zD80rYmITfxIypl9xIzzc3xig+wIcGwp1VbOx5U8wDD311VN8zmuXeqJpxydIA9MOm0INWY1efK95O++ibVXZJqQe2Na9fJ9WHTVg7SbMHxXhDv6SygewmwsaYITFzyiZsDX4rCqVH1iFS0ikXIUKUHEOW5pVzX71j/Rbn1n1+6s8mrAJaPv1Be1jsVHnvaZufqljlt+GX3S9qLSAItgqBN8nzjU7H8Tgqq2lNKqSIwqHvyc1h7/p5VYWMiWfKg9QdVgL+hwWGJ/cld33rqpfA/LLURlQbZnrYtyZ4S4="
-        skip_cleanup: true
-        on:
-          tags: true
-          python: 3.6
+  - stage: Lint
+    install:
+    - pip install pipenv
+    - pipenv sync --dev
+    script:
+    - echo "Validating linting"
+    - flake8 .
+  - stage: Github release
+    script: echo "Releasing to Github"
+    deploy:
+      provider: releases
+      api_key:
+        secure: PIYnW2887DlJJ82kGkjNcAy96E0TUX6FQAPweoTw9JD8gWnVXLcWuhGI2Q9m8QLoFLLzpSKNsQJKRRTUdN7Q5vBMTBUUjwf4aUHsWInEtxrGHc7bgB9eLmiN/UvW3x6NDNUthGmF1NHEqlstc9/n328NTJp5g96RgmpV8lLRE6+e5pljzqNuT+ZESBWnDJ9Of0JHG1PRHs+2yZjeHOVhy8Uq9vG2U/dM/w1WQVoZKSoSgJm7QvhYhcYhTbrOl2liOWeGTQ3WE4x5RkmWrBsCP8c+s2AqxfwlQVUe3+zZc9TV1l3+jBeZhZ8EEKs5VPueAFrIjSOiBrP2R6Ltd6bisyf5o92K988aXjBMBck9ikTJQ3WeJqjb9ldTMeprA2V0qqNzLfT1MnbLPxa/2Cl1S2NM9vFxdEsOHYSPTMIbEgMvkd+/enUZI7UO9SPah12cxhCnf4JNS0XcI9/V1xnFS0URZH7TeBbzzEGs0ZrFQj3XI/y6O8g9uE0x/D9ZIbfriZmrS0F8zUNX/7Y/CkXtbuW6z0sEerUD8NFX9oXk5bJVkvVYLkeoNM2sXwnp6sK+mep6zNfyv1Zfo1mqzKqk6f5zM6V/VS531sSN8iNx55a7+hQ9akzfs0A5uILfr9pLlFam8HOejpcBAGrypA4mSD2/rDSRSZ4RGGMzbLIGjgY=
+      skip_cleanup: true
+      on:
+        repo: etienne-napoleone/forkedthanks
+        tags: true
+        python: 3.6
