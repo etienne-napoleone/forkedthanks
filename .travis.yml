@@ -9,15 +9,16 @@ install:
     - pipenv sync --dev
 
 script:
-    - flake8 forkedthanks
+    - flake8 .
 
 jobs:
   include:
     - stage: release
-      provider: releases
-      api_key:
-        secure:  k1dLwG8OnMjYC6ghnHcRY+t8jX5Bizfkq2dtb8CCrUr85vwDc7Rir1+/e5LlruC43JyeqvLg5ND4R4gix5susLpdCf/K2PGN52XbVzyPF6unNlsUH46CvzhPsL+o1sW1doY1PSypJ5BwMjDVE+3TWEvUjcnbjPvHWmKXKuLa1x8VAf5KXLyKAfzmvXhXetuPFPJ9N6gLYBUvo0UJYUntwwCnjil08pzkPVpsrxTkXjHdOIRQcLnjzDcBtjbHDLwIz1VQhS6ZybUhdcGfgmj8iwihI8bPftYcp5+2BQFH6j1ilo7R17GPmKrOAbeN5FbYbvzJERZ82Ow35PYNIZN3y/4SORVlPB4n7xK8mA1N0vaA0qOnw9vtBC9XDAY/qIDMOF3t0g+VPfXs28RMciPQoLB1nVkKvvJSwIZ6zDk3paLrM3f01/9UCz78yySnEcSR9n180xb2bZL1zwQKwkkBH38Xa67h1UZI4vnnDd1uKO2wn9VS0761qFaYhUYsovzQygtF7cH5G4vxKO18GIgiQohPi7BIrJQggWF5iCTjNmZFmK9tWBOyVSTis4gGhVDdVYK6b2mksyhmrP3crldPrV0wN4pbayDmCFSsfgk4K2H38k7/L4UzzObO8xe5tzi9YYBlW+GoavRIuphR9gGDd39art46gt0Pn/hxaLteqvI=
-      # file: "FILE TO UPLOAD"
-      skip_cleanup: true
-      on:
-        tags: true
+      deploy:
+        provider: releases
+        api_key:
+          secure:  k1dLwG8OnMjYC6ghnHcRY+t8jX5Bizfkq2dtb8CCrUr85vwDc7Rir1+/e5LlruC43JyeqvLg5ND4R4gix5susLpdCf/K2PGN52XbVzyPF6unNlsUH46CvzhPsL+o1sW1doY1PSypJ5BwMjDVE+3TWEvUjcnbjPvHWmKXKuLa1x8VAf5KXLyKAfzmvXhXetuPFPJ9N6gLYBUvo0UJYUntwwCnjil08pzkPVpsrxTkXjHdOIRQcLnjzDcBtjbHDLwIz1VQhS6ZybUhdcGfgmj8iwihI8bPftYcp5+2BQFH6j1ilo7R17GPmKrOAbeN5FbYbvzJERZ82Ow35PYNIZN3y/4SORVlPB4n7xK8mA1N0vaA0qOnw9vtBC9XDAY/qIDMOF3t0g+VPfXs28RMciPQoLB1nVkKvvJSwIZ6zDk3paLrM3f01/9UCz78yySnEcSR9n180xb2bZL1zwQKwkkBH38Xa67h1UZI4vnnDd1uKO2wn9VS0761qFaYhUYsovzQygtF7cH5G4vxKO18GIgiQohPi7BIrJQggWF5iCTjNmZFmK9tWBOyVSTis4gGhVDdVYK6b2mksyhmrP3crldPrV0wN4pbayDmCFSsfgk4K2H38k7/L4UzzObO8xe5tzi9YYBlW+GoavRIuphR9gGDd39art46gt0Pn/hxaLteqvI=
+        # file: "FILE TO UPLOAD"
+        skip_cleanup: true
+        on:
+          tags: true
