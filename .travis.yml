@@ -7,10 +7,11 @@ jobs:
       install:
           - pip install pipenv
           - pipenv sync --dev
-      script: flake8 .
+      script:
+        - echo "Validating linting"
+        - flake8 .
     - stage: Github release
-      install: false
-      script: false
+      script: echo "Releasing to Github"
       deploy:
         provider: releases
         api_key:
