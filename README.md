@@ -21,3 +21,6 @@ Usage: forkedthanks.py [OPTIONS] USERNAME
 Options:
   --help  Show this message and exit.
 ```
+
+## Todo
+- [ ] Add 2fa support
